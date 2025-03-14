@@ -8,44 +8,41 @@ Esta es una prueba técnica para evaluar tus habilidades en Angular e Ionic. El 
 - Consumir datos desde la API mockeada proporcionada.
 - Implementar filtros dinámicos y diseño responsivo.
 
-## Endpoints de la API
-Base URL: `https://test.worldsacross.com/api`
+## Instrucciones.
+Para este proyecto se tiene que ejecutar lo siguiente 
+
+**Paso 1: Instalar Node.js y npm **
+
+  * Asegúrate de que Node.js y npm estén instalados en tu sistema.
+      * Node.js es el entorno de ejecución de JavaScript que se utiliza para ejecutar proyectos Angular e Ionic.
+      * npm (Node Package Manager) o yarn son gestores de paquetes que se utilizan para instalar las dependencias del proyecto.
+  * Puedes descargar e instalar Node.js desde el sitio web oficial: [https://nodejs.org/](https://www.google.com/url?sa=E&source=gmail&q=https://nodejs.org/)
+  * npm se instala automáticamente con Node.js.
+  * Una vez que hayas instalado node y npm, puedes verificar las versiones con los siguientes comandos.
+      * `node -v`
+      * `npm -v`
+
+**Paso 2: Clonar el Repositorio**
+
+  * Asumo que la persona ya ha clonado el repositorio desde el sistema de control de versiones (Git).
+
+**Paso 3: Navegar al Directorio del Proyecto**
+
+  * Abre la terminal o la línea de comandos.
+  * Navega hasta el directorio del proyecto clonado utilizando el comando `cd`:
+      * Ejemplo: `cd /ruta/al/directorio/del/proyecto`
+
+**Paso 4: Instalar las Dependencias**
+
+  * Ejecuta el siguiente comando para instalar las dependencias del proyecto:
+      * Si usas npm: `npm install`
+  * Este comando leerá el archivo `package.json` y descargará todas las bibliotecas y herramientas necesarias para el proyecto.
+
+**Paso 5: Ejecutar la Aplicación**
+
+  * Una vez que las dependencias estén instaladas, ejecuta el siguiente comando para iniciar la aplicación en modo de desarrollo:
+      * `ionic serve`
+  * Este comando compilará la aplicación y la abrirá automáticamente en un navegador web.
+  * Los cambios que realices en el código fuente se reflejarán automáticamente en el navegador.
 
 
-
-### Endpoints Disponibles
-- `GET /tutors`: Lista de tutores.
-- `GET /users`: Lista de usuarios.
-- `GET /booking`: Lista de reservas.
-
-## Funcionalidades a Implementar
-
-### Lista de Tutores
-- Mostrar una lista de tutores obtenida del endpoint `/tutors`.
-- Implementar un filtro dinámico por `Speciality`.
-
-### Lista de Usuarios
-- Mostrar una lista de usuarios obtenida del endpoint `/users`.
-- Agregar la funcionalidad para seleccionar un usuario y mostrar sus detalles.
-
-### Reservas
-- Mostrar todas las reservas obtenidas del endpoint `/booking`.
-- Permitir filtrar reservas por `User`.
-
-## Diseño
-- Usa componentes de Ionic para listas, inputs y botones.
-- Implementa un diseño responsivo que funcione en dispositivos móviles y desktop.
-
-## Recursos
-- Documentación de [Angular](https://angular.io/docs).
-- Documentación de [Ionic](https://ionicframework.com/docs).
-
-## Extras Opcionales
-- Validaciones en formularios.
-- Agregar mensajes de error para manejo de errores al consumir la API.
-- Diseño avanzado para mejorar la experiencia del usuario.
-
-## Entrega
-1. Sube tu proyecto a un repositorio público o privado (y comparte acceso).
-2. Incluye un archivo `README.md` en tu repositorio con las instrucciones necesarias para ejecutar tu aplicación.
-3. Envía el enlace del repositorio.
