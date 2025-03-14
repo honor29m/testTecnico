@@ -1,0 +1,6 @@
+<ion-select class="filtro" placeholder="Seleccionar Filtro" (ionChange)="filtrar($event.detail.value)">
+
+  <ion-select-option *ngFor="let filtro of filtros" [value]="filtro">
+    {{ filtro }}
+  </ion-select-option>
+</ion-select>

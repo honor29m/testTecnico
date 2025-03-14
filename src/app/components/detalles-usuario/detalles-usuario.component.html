@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <p>Nombre: {{ user.first_name }} {{ user.last_name }}</p>
+    <p>Id: {{ user.id }}</p>
+    <p>Teléfono: {{ user.phone }}</p>
+    <p>Email: {{ user.email }}</p>
+</ion-content>

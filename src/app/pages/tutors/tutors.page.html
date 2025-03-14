@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tutores</ion-title>
+    <ion-menu-button slot="end"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-menu class="menu" contentId="main-content" side="end">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list >
+        <ion-menu-toggle autoHide="false" *ngFor="let p of appPages; let i = index">
+          <ion-item [routerLink]="p.url" routerLinkActive="selected" routerDirection="root">
+            <ion-icon slot="start" [name]="p.icon"></ion-icon>
+            <ion-label>
+              {{ p.title }}
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>  
+  <div  id="main-content" >
+    <ion-router-outlet></ion-router-outlet>
+  </div>  
+
+  <app-speciality (filtroCambio)="actualizarFiltro($event)"></app-speciality>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let nombre of nombreColumna">
+        <strong>{{ nombre  }}</strong>
+      </ion-col>
+    </ion-row>
+    <ng-container *ngIf="filtro">
+    <ion-row *ngFor="let fila of datosFiltrados" >
+      <ion-col *ngFor="let columna of getColumna(datosFiltrados)">
+        {{ fila[columna] }}
+      </ion-col>
+    </ion-row>
+  </ng-container>
+  <ng-container *ngIf="!filtro">
+    <ion-row *ngFor="let fila of dataTutors">
+      <ion-col *ngFor="let columna of getColumna(dataTutors)">
+        {{ fila[columna] }}
+      </ion-col>
+    </ion-row>
+  </ng-container>
+  </ion-grid> 
+</ion-content>
